@@ -6,13 +6,26 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class TesteCommand implements CommandExecutor {
+
+    private Main main;
+
+    public ConfigCommand(Main main) {
+        this.main = main;
+    }
+
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
 
-        if (strings.length == 1) {
-            if (strings[0].equalsIgnoreCase("Hello")) {
-                ((Player) commandSender).sendMessage("Hello, buddy");
+        if (commandSender instanceof Player) {
+
+            Player player = (Player) commandSender;
+
+            player.sendMessage(main.getConfig().getString("Word"));
+            player.sendMessage(main.getConfig().getString("Number") + "");
+            if (main.getConfig().getBoolean("Boolean")) {
+                player.sendMessage("This feature is enabled!");
             }
+        
         }
 
         return false;

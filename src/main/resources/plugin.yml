@@ -7,3 +7,4 @@ description: Teste de Plugins
 commands:
   heal:
   teste:
+  consoleHello:

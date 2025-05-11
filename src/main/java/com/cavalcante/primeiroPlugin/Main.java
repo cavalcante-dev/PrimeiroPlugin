@@ -10,10 +10,16 @@ public final class Main extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+
         Bukkit.getPluginManager().registerEvents(this, this);
         System.out.println("Irra, primeiro plugin!");
         getCommand("heal").setExecutor(new HealCommands());
-        getCommand("teste").setExecutor(new TesteCommand());
+        getCommand("teste").setExecutor(new TesteCommand(this));
+        getCommand("consoleHello").setExecutor(new ConsoleCommand());
+
     }
 
     public void onPlayerEggThrow(PlayerEggThrowEvent e) {
