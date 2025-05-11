@@ -1,0 +1,9 @@
+name: PrimeiroPlugin
+version: '1.0-SNAPSHOT'
+main: com.cavalcante.primeiroPlugin.Main
+api-version: '1.21'
+authors: [ cavalcante-dev ]
+description: Teste de Plugins
+commands:
+  heal:
+  teste:
