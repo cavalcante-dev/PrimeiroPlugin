@@ -1,3 +1,4 @@
 com\cavalcante\primeiroPlugin\HealCommands.class
+com\cavalcante\primeiroPlugin\ConsoleCommand.class
 com\cavalcante\primeiroPlugin\Main.class
 com\cavalcante\primeiroPlugin\TesteCommand.class

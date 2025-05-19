@@ -9,9 +9,8 @@ public class TesteCommand implements CommandExecutor {
 
     private Main main;
 
-    public ConfigCommand(Main main) {
-        this.main = main;
-    }
+    public TesteCommand(Main main) { this.main = main; }
+
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
