@@ -1,7 +1,6 @@
 package com.cavalcante.primeiroPlugin;
 
 import net.md_5.bungee.api.ChatMessageType;
-import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.*;
 import org.bukkit.entity.*;
@@ -10,13 +9,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.player.PlayerEggThrowEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.text.MessageFormat;
-import java.util.Objects;
 
 public final class Main extends JavaPlugin implements Listener {
 
@@ -69,9 +64,9 @@ public final class Main extends JavaPlugin implements Listener {
     public void onCreeperSpawn(CreatureSpawnEvent e) {
 
         if (e.getEntityType() == EntityType.ENDER_DRAGON) {
-            e.setCancelled(true);
-            System.out.println("Creeper.... ow man");
-            Objects.requireNonNull(Bukkit.getWorld("World")).spawnEntity(e.getLocation(), EntityType.COW);
+
+
+
         }
 
     }
